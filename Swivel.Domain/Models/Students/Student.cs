@@ -9,6 +9,10 @@ namespace Swivel.Domain.Models
     [Table("student")]
     public class Student
     {
+        public Student()
+        {
+            StudentCourse = new HashSet<StudentCourse>();
+        }
         [Key]
         [Column("StudentId")]
         public int Id { get; set; }
@@ -32,5 +36,7 @@ namespace Swivel.Domain.Models
         [Required(ErrorMessage = "Address is required")]
         [StringLength(100, ErrorMessage = "Address can not be longer then 100 characters")]
         public string Address { get; set; }
+        public ICollection<StudentCourse> StudentCourse { get; set; }
+
     }
 }

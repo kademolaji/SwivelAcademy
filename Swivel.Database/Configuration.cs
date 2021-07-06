@@ -1,14 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Swivel.Database
 {
     public static class Configuration
     {
-        public static IServiceCollection AddDbContext(
+        public static IServiceCollection AddAppDbContext(
             this IServiceCollection services,
             string connectionString,
             int? commandTimeout = null,

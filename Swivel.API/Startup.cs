@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Swivel.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,16 +17,21 @@ namespace Swivel.API
 {
     public class Startup
     {
+        private readonly IConfiguration _configuration;
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
-
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // dbcontext
+            services.AddAppDbContext(
+                connectionString: _configuration.GetConnectionString("DefaultConnection"),
+                commandTimeout: _configuration.GetValue("AppSettings:CommandTimeout", 30),
+                maxRetryCount: 5);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
