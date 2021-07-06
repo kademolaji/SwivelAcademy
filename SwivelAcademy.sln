@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Database", "Swivel.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.API", "Swivel.API\Swivel.API.csproj", "{8F8E69E6-930F-4467-8126-D4004BCA62C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Commands", "Swivel.Commands\Swivel.Commands.csproj", "{EA91E371-FA71-44E4-A4F6-DF2AF66C8C23}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Queries", "Swivel.Queries\Swivel.Queries.csproj", "{7401FBAB-DD2A-4B49-BCE2-E62A5A625AE7}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.SSO", "Swivel.SSO\Swivel.SSO.csproj", "{65C73839-CD68-487F-A1BD-473D869A074C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Utilities", "Swivel.Utilities\Swivel.Utilities.csproj", "{6D215DFA-A77B-486F-AC4D-54BCE8088A58}"
@@ -30,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.UnitTests.API", "Swivel.UnitTests.API\Swivel.UnitTests.API.csproj", "{34203046-2863-4956-A7E2-5FB1671095B1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.UnitTests.Utilities", "Swivel.UnitTests.Utilities\Swivel.UnitTests.Utilities.csproj", "{A30EA64E-9BAB-43C3-BF9F-ECE7DB9C98BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swivel.Repository", "Swivel.Repository\Swivel.Repository.csproj", "{DED83F1D-862A-4D64-87FE-CBBCEFF0AAC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,14 +47,6 @@ Global
 		{8F8E69E6-930F-4467-8126-D4004BCA62C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F8E69E6-930F-4467-8126-D4004BCA62C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F8E69E6-930F-4467-8126-D4004BCA62C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EA91E371-FA71-44E4-A4F6-DF2AF66C8C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA91E371-FA71-44E4-A4F6-DF2AF66C8C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA91E371-FA71-44E4-A4F6-DF2AF66C8C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA91E371-FA71-44E4-A4F6-DF2AF66C8C23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7401FBAB-DD2A-4B49-BCE2-E62A5A625AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7401FBAB-DD2A-4B49-BCE2-E62A5A625AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7401FBAB-DD2A-4B49-BCE2-E62A5A625AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7401FBAB-DD2A-4B49-BCE2-E62A5A625AE7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65C73839-CD68-487F-A1BD-473D869A074C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65C73839-CD68-487F-A1BD-473D869A074C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65C73839-CD68-487F-A1BD-473D869A074C}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -89,6 +79,10 @@ Global
 		{A30EA64E-9BAB-43C3-BF9F-ECE7DB9C98BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A30EA64E-9BAB-43C3-BF9F-ECE7DB9C98BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A30EA64E-9BAB-43C3-BF9F-ECE7DB9C98BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED83F1D-862A-4D64-87FE-CBBCEFF0AAC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED83F1D-862A-4D64-87FE-CBBCEFF0AAC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED83F1D-862A-4D64-87FE-CBBCEFF0AAC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED83F1D-862A-4D64-87FE-CBBCEFF0AAC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

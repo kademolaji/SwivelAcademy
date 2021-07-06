@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Swivel.Database\Swivel.Database.csproj" />
+  </ItemGroup>
+
 </Project>
