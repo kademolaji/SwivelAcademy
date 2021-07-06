@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "RcViR2ZO+3H7GsRy3a1v/OxVrzsV21S3sMQOUZ3AFj6hZZkuQoqGLsDYoz2FPgwpuCNwrOygYdka297qj/Cc7Q==",
+  "success": true,
+  "projectFilePath": "C:\\PERSONAL\\SwivelAcademy\\Swivel.Utilities\\Swivel.Utilities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
