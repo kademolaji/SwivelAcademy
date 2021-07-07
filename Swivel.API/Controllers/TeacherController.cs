@@ -14,11 +14,12 @@ namespace Swivel.API.Controllers
     [ApiController]
     public class TeacherController : ControllerBase
     {
-        private readonly ILoggerManager _logger;
+        private ILoggerManager _logger;
         private readonly IRepositoryWrapper _repository;
 
         public TeacherController(ILoggerManager logger, IRepositoryWrapper repository)
         {
+            _logger = logger;
             _repository = repository;
         }
 
