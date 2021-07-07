@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -7,9 +8,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using NLog;
+using Swivel.API.Extensions;
 using Swivel.Database;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -21,6 +25,7 @@ namespace Swivel.API
 
         public Startup(IConfiguration configuration)
         {
+            LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
             _configuration = configuration;
         }
 
@@ -33,6 +38,10 @@ namespace Swivel.API
                 commandTimeout: _configuration.GetValue("AppSettings:CommandTimeout", 30),
                 maxRetryCount: 5);
 
+            services.ConfigureCors();
+            services.ConfigureIISIntegration();
+            services.ConfigureLoggerService();
+            services.ConfigureRepositoryWrapper();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -56,6 +65,14 @@ namespace Swivel.API
 
             app.UseAuthorization();
 
+            app.UseCors("CorsPolicy");
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.All
+            });
+
+            app.UseStaticFiles();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

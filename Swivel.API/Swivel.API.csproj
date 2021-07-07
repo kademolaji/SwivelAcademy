@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Swivel.Database\Swivel.Database.csproj" />
+    <ProjectReference Include="..\Swivel.Repository\Swivel.Repository.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Swivel.Database\Swivel.Database.csproj" />
+    <ProjectReference Include="..\Swivel.Utilities\Swivel.Utilities.csproj" />
   </ItemGroup>
 
 </Project>
